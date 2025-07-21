@@ -36,12 +36,12 @@ async function fetchData() {
         const data = await response.json();
 
         document.getElementById('movie-info1').innerHTML = `<div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-[23%]">
-                                                                <div class="relative h-90 m-2.5 overflow-hidden text-white rounded-md">
-                                                                    <img src="${data.Poster}" />
+                                                                <div class="relative flex justify-center h-85 m-2.5 overflow-hidden text-white rounded-md">
+                                                                    <img src="${data.Poster}"/>
                                                                 </div>
                                                                 <div class="p-4">
-                                                                    <h6 class="mb-2 text-slate-800 text-xl font-semibold">
-                                                                        Movie Title: ${data.Title}
+                                                                    <h6 class="mb-2 text-slate-800 text-xl text-center font-semibold">
+                                                                        ${data.Title}
                                                                     </h6>
                                                                     <p class="text-slate-600 leading-normal font-light">
                                                                         Year: ${data.Year}
