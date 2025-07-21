@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R2H Movie Search</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
@@ -29,20 +30,34 @@
             </form>
         </section>
         <section id="movie-info">
-            <!-- <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
-                <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                    <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                        alt="card-image" />
+            <!--    <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
+                <div class="relative h-100 m-2.5 overflow-hidden text-white rounded-md">
+                    <img src="${data.Title}" />
                 </div>
                 <div class="p-4">
                     <h6 class="mb-2 text-slate-800 text-xl font-semibold">
                         Movie Title: Pulp Fiction
                     </h6>
                     <p class="text-slate-600 leading-normal font-light">
-                        Year: 2014
+                        Year: ${data.Year}
                     </p>
                     <p class="text-slate-600 leading-normal font-light">
-                        Actors: Sabrina Carpenter, Dove Cameron
+                        Genre: ${data.Genre}
+                    </p>
+                    <p class="text-slate-600 leading-normal font-light">
+                        Director: ${data.Director}
+                    </p>
+                    <p class="text-slate-600 leading-normal font-light">
+                        Actors: ${data.Actors}
+                    </p>
+                    <p class="text-slate-600 leading-normal font-light">
+                        Summary: ${data.Plot}
+                    </p>
+                    <p class="text-slate-600 leading-normal font-light">
+                        Ratings:
+                    <ul>
+                        <li>$</li>
+                    </ul>
                     </p>
                 </div>
                 <div class="px-4 pb-4 pt-0 mt-2">
@@ -51,8 +66,8 @@
                         type="button">
                         Read more
                     </button>
-                </div>
-            </div> -->
+        </div>
+        </div> -->
         </section>
 
     </main>
