@@ -83,7 +83,19 @@ async function fetchData() {
 
     }
     catch(error){
-        console.error(error);
+        // console.log("Did not find movie");
+
+        const message = document.createElement("div");
+        message.textContent = "Movie not found!";
+        message.className = "fixed top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded shadow-lg z-50";
+        message.id = "not-found-message"
+        document.getElementById('movie-info').appendChild(message); // Or append to a specific container
+        console.log("it is working!")
+
+        setTimeout(() => {
+        message.remove(); // removes it from the DOM after 2 seconds
+        }, 2000);
+
     }
     
 }
