@@ -39,8 +39,8 @@ async function fetchData() {
 
         const data = await response.json();
         const sanitizedTitle = data.Title.replace(/[^\w-]/g, '-');
-        console.log('Sanitized Title: ', sanitizedTitle);
-        console.log('Movies Searched: ', moviesSearched);
+        // console.log('Sanitized Title: ', sanitizedTitle);
+        // console.log('Movies Searched: ', moviesSearched);
 
         if(!moviesSearched.includes(sanitizedTitle)) {
             document.getElementById('movie-info1').innerHTML = `<div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-[23%]" id="${sanitizedTitle}">
@@ -108,15 +108,27 @@ async function fetchData() {
 
         const message = document.createElement("div");
         message.textContent = "Movie not found!";
-        message.className = "fixed top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded shadow-lg z-50"; //centers it
+        message.className = "fixed top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded shadow-lg z-50 opacity-100 transition-opacity ease-in-out duration-500"; //centers it
         message.id = "not-found-message"
         document.getElementById('movie-info').appendChild(message); // Or append to a specific container
-
-        setTimeout(() => {
-        message.remove(); // removes it from the DOM after 2 seconds
-        }, 2000);
+        movieNotFound(message);
 
     }
     
+}
+
+// Transition of Message
+function movieNotFound(message) {
+    setTimeout(() => {
+        message.classList.replace('opacity-0', 'opacity-100')
+    }, 10);
+
+    setTimeout(() => {
+        message.classList.replace('opacity-100', 'opacity-0');
+    }, 2000);
+
+    setTimeout(() => {
+        message.remove(); // removes it from the DOM after 2 seconds
+    }, 2500);
 }
 
