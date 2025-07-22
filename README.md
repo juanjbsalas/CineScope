@@ -84,6 +84,7 @@ Check out CineScope here! 👉 [https://juanjbsalas.github.io/CineScope/](https:
 ## 📝 Future Improvements
 
 - Add search history tracking
+- X button to remove cards
 - Enable genre/year-based filtering on the rendered results
 - Improve accessibility and error messaging
 - Connect to trailer API to showcase trailers
