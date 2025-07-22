@@ -117,7 +117,9 @@ async function fetchData() {
     
 }
 
+
 // Transition of Message
+
 function movieNotFound(message) {
     setTimeout(() => {
         message.classList.replace('opacity-0', 'opacity-100')
