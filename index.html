@@ -22,51 +22,37 @@
             </div>
             <form action="" id="movie-form" onsubmit="return false">
                 <div class="flex flex-row justify-center content-center ml-8 mr-8 rounded-lg w-auto">
-                    <div class="border-1 rounded-lg flex flex-row">
-                        <div class="w-120 h-12 border-r-2">
+                    <div class="border-1 rounded-xl flex flex-row">
+                        <div class="w-120 h-8 border-r-2">
                             <!-- <label for="">Title:</label> -->
                             <input type="text" name="" id="form-title" placeholder="Title"
                                 onkeypress="if(event.key === 'Enter') fetchData()"
-                                class="w-120 pl-2 pr-2 h-10 focus:outline-none focus:ring-0 focus:border-transparent">
+                                class="w-120 pl-2 pr-2 h-6 focus:outline-none focus:ring-0 focus:border-transparent text-center">
                         </div>
-                        <div class="h-12 border-r-2">
+                        <div class="h-8 border-r-2">
                             <input type="number" name="" id="" placeholder="Year"
-                                class="h-10 w-50 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent">
+                                class="h-6 w-25 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent text-center">
                         </div>
-                        <div class="h-12">
+                        <div class="h-8">
                             <input type="text" name="" id="" placeholder="Genre"
-                                class="h-10 w-50 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent">
+                                class="h-6 w-50 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent text-center">
                         </div>
                     </div>
-                    <div class="w-auto pl-2 pr-2 h-10">
-                        <button type="button" onclick="fetchData()">Submit</button>
+                    <div class="w-auto border-2 p-2 ml-2 rounded-xl">
+                        <button type="button" onclick="fetchData()">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+
+                        </button>
                     </div>
                 </div>
 
             </form>
-
-            <!-- <div class="h-auto bg-gray-100 flex flex-col justify-start">
-                <div class="relative p-4 w-full sm:max-w-2xl sm:mx-auto">
-                    <div class="overflow-hidden z-0 rounded-full relative p-3">
-                        <form role="form" onsubmit="return false"
-                            class="relative flex h-[1.7rem] z-50 bg-white rounded-full" id="movie-form">
-                            <input type="text" placeholder="Enter your favorite movie for more info!"
-                                class="rounded-full flex-1 px-6 py-4 text-gray-700 focus:outline-none" id="form-title"
-                                onkeydown="if(event.key === 'Enter') fetchData()">
-                            <button
-                                class="bg-indigo-500 text-white rounded-full font-semibold px-8 py-2 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
-                                onclick="fetchData()">Search</button>
-                        </form>
-                        <div class="glow glow-1 z-10 bg-pink-400 absolute"></div>
-                        <div class="glow glow-2 z-20 bg-purple-400 absolute"></div>
-                        <div class="glow glow-3 z-30 bg-yellow-400 absolute"></div>
-                        <div class="glow glow-4 z-40 bg-blue-400 absolute"></div>
-                    </div>
-                </div>
-            </div> -->
-
         </section>
-        <section id="movie-info" class="pt-45">
+        <section id="movie-info" class="pt-35">
             <div id="movie-info1" class="flex flex-wrap justify-evenly content-center gap-y-4 gap-x-1 w-full">
 
             </div>
