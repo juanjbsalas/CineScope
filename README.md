@@ -2,7 +2,7 @@
 
 CineScope is a dynamic and visually engaging front-end movie search application that allows users to quickly fetch and display details of their favorite films. Built with **HTML**, **Tailwind CSS**, and **JavaScript**, the app interacts with the **OMDb API** to retrieve accurate movie data based on user input.
 
-Check it out here! 👉
+Check out CineScope here! 👉 [https://juanjbsalas.github.io/CineScope/](https://juanjbsalas.github.io/CineScope/)
 
 ---
 
