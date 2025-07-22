@@ -21,23 +21,24 @@
                 <h2 class="text-center pt-1 pb-1">Enter your favorite movies below!</h2>
             </div>
             <form action="" id="movie-form" onsubmit="return false">
-                <div class="flex flex-row justify-center content-center ml-8 mr-8 rounded-lg w-auto h-9">
+                <div
+                    class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 px-4 w-full max-w-5xl mx-auto">
                     <div class="border-1 rounded-xl flex flex-row">
-                        <div class="w-120 h-8 border-r-2">
+                        <div class="h-8 border-r-2">
                             <!-- <label for="">Title:</label> -->
                             <input type="text" name="" id="form-title" placeholder="Title"
                                 onkeypress="if(event.key === 'Enter') fetchData()"
-                                class="w-120 pl-2 pr-2 h-6 focus:outline-none focus:ring-0 focus:border-transparent text-center">
+                                class="h-6 w-full sm:w-40 md:w-56 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent text-center">
                         </div>
                         <div class="h-8 border-r-2">
                             <input type="number" name="" id="year-textbox" placeholder="Year"
                                 onkeypress="if(event.key === 'Enter') fetchData()"
-                                class="h-6 w-25 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent text-center">
+                                class="h-6 w-full sm:w-24 md:w-32 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent text-center">
                         </div>
                         <div class="h-8">
                             <input type="text" name="" id="genre-textbox" placeholder="Genre"
                                 onkeypress="if(event.key === 'Enter') fetchData()"
-                                class="h-6 w-40 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent text-center">
+                                class="h-6 w-full sm:w-40 md:w-56 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent text-center">
                         </div>
                     </div>
                     <div
@@ -54,8 +55,9 @@
 
             </form>
         </section>
-        <section id="movie-info" class="pt-35">
-            <div id="movie-info1" class="flex flex-wrap justify-evenly content-center gap-y-4 gap-x-1 w-full">
+        <section id="movie-info" class="pt-52 sm:pt-40 md:pt-45">
+            <div id="movie-info1"
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 w-full">
 
             </div>
         </section>

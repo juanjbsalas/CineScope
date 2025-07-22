@@ -31,7 +31,7 @@ async function fetchData() {
         clearYearGenre();
         if(!moviesSearched.includes(sanitizedTitle)) {
             searchAnimation();
-            document.getElementById('movie-info1').innerHTML = `<div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-[23%]" id="${sanitizedTitle}">
+            document.getElementById('movie-info1').innerHTML = `<div class="relative flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg w-full" id="${sanitizedTitle}">
                                                                     <div class="relative flex justify-center h-85 m-2.5 overflow-hidden text-white rounded-md">
                                                                         <img src="${data.Poster}"/>
                                                                     </div>
