@@ -19,9 +19,10 @@
         <section class="fixed top-0 left-0 w-full z-80 bg-gray-100" id="search-section">
             <div class="flex flex-col p-2 justify-center content-center">
                 <h1 class="text-7xl text-center">CineScope</h1>
+                <h2 class="text-center pt-1 pb-1">Enter your favorite movies below!</h2>
             </div>
             <form action="" id="movie-form" onsubmit="return false">
-                <div class="flex flex-row justify-center content-center ml-8 mr-8 rounded-lg w-auto">
+                <div class="flex flex-row justify-center content-center ml-8 mr-8 rounded-lg w-auto h-9">
                     <div class="border-1 rounded-xl flex flex-row">
                         <div class="w-120 h-8 border-r-2">
                             <!-- <label for="">Title:</label> -->
@@ -30,22 +31,24 @@
                                 class="w-120 pl-2 pr-2 h-6 focus:outline-none focus:ring-0 focus:border-transparent text-center">
                         </div>
                         <div class="h-8 border-r-2">
-                            <input type="number" name="" id="" placeholder="Year"
+                            <input type="number" name="" id="year-textbox" placeholder="Year"
+                                onkeypress="if(event.key === 'Enter') fetchData()"
                                 class="h-6 w-25 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent text-center">
                         </div>
                         <div class="h-8">
-                            <input type="text" name="" id="" placeholder="Genre"
-                                class="h-6 w-50 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent text-center">
+                            <input type="text" name="" id="genre-textbox" placeholder="Genre"
+                                onkeypress="if(event.key === 'Enter') fetchData()"
+                                class="h-6 w-40 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent text-center">
                         </div>
                     </div>
-                    <div class="w-auto border-2 p-2 ml-2 rounded-xl">
+                    <div
+                        class="w-auto border-2 pb-1 pt-1 pr-2 pl-2 ml-2 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                         <button type="button" onclick="fetchData()">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
+                                id="search-button" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                             </svg>
-
                         </button>
                     </div>
                 </div>

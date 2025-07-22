@@ -41,8 +41,9 @@ async function fetchData() {
         const sanitizedTitle = data.Title.replace(/[^\w-]/g, '-');
         // console.log('Sanitized Title: ', sanitizedTitle);
         // console.log('Movies Searched: ', moviesSearched);
-
+        clearYearGenre();
         if(!moviesSearched.includes(sanitizedTitle)) {
+            searchAnimation();
             document.getElementById('movie-info1').innerHTML = `<div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-[23%]" id="${sanitizedTitle}">
                                                                     <div class="relative flex justify-center h-85 m-2.5 overflow-hidden text-white rounded-md">
                                                                         <img src="${data.Poster}"/>
@@ -129,3 +130,13 @@ function movieNotFound(message) {
     }, 2500);
 }
 
+function searchAnimation() {
+    let button = document.querySelector('#search-button');
+    button.classList.add('bounce');
+    setTimeout(() => button.classList.remove('bounce'), 500);
+}
+
+function clearYearGenre() {
+    document.getElementById('year-textbox').value = "";
+    document.getElementById('genre-textbox').value = "";
+}
