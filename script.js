@@ -15,7 +15,7 @@ async function fetchData() {
             movTitleExtension = movTitle;
         }
 
-        let url = `http://www.omdbapi.com/?apikey=77a8b526&t=${movTitleExtension}`;
+        let url = `https://www.omdbapi.com/?apikey=77a8b526&t=${movTitleExtension}`;
         console.log(movTitleExtension);
         console.log(url);
         console.log(moviesSearched);
