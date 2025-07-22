@@ -7,38 +7,54 @@
     <title>R2H Movie Search</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="app.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-gray-100">
     <main>
         <!-- <h1>Enter your Info Here</h1> -->
-        <section id="search-section">
-            <!-- <form action="" id="movie-form">
-                <div class="flex mb-4">
-                    <div class="w-1/3 border-2 h-12">
-                        <label for="">Title:</label>
-                        <input type="text" name="" id="form-title" placeholder="Title"
-                            onkeypress="if(event.key === 'Enter') fetchData()">
+        <section class="fixed top-0 left-0 w-full z-80 bg-gray-100" id="search-section">
+            <div class="flex flex-col p-2 justify-center content-center">
+                <h1 class="text-7xl text-center">CineScope</h1>
+            </div>
+            <form action="" id="movie-form" onsubmit="return false">
+                <div class="flex flex-row justify-center content-center ml-8 mr-8 rounded-lg w-auto">
+                    <div class="border-1 rounded-lg flex flex-row">
+                        <div class="w-120 h-12 border-r-2">
+                            <!-- <label for="">Title:</label> -->
+                            <input type="text" name="" id="form-title" placeholder="Title"
+                                onkeypress="if(event.key === 'Enter') fetchData()"
+                                class="w-120 pl-2 pr-2 h-10 focus:outline-none focus:ring-0 focus:border-transparent">
+                        </div>
+                        <div class="h-12 border-r-2">
+                            <input type="number" name="" id="" placeholder="Year"
+                                class="h-10 w-50 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent">
+                        </div>
+                        <div class="h-12">
+                            <input type="text" name="" id="" placeholder="Genre"
+                                class="h-10 w-50 pl-2 pr-2 focus:outline-none focus:ring-0 focus:border-transparent">
+                        </div>
                     </div>
-                    <div class="w-1/3 border-2 h-12">
-                        <input type="number" name="" id="" placeholder="Year">
-                    </div>
-                    <div class="w-1/3 border-2 h-12">
+                    <div class="w-auto pl-2 pr-2 h-10">
                         <button type="button" onclick="fetchData()">Submit</button>
                     </div>
                 </div>
-            </form> -->
 
-            <div class="h-auto bg-gray-100 flex flex-col justify-start">
+            </form>
+
+            <!-- <div class="h-auto bg-gray-100 flex flex-col justify-start">
                 <div class="relative p-4 w-full sm:max-w-2xl sm:mx-auto">
                     <div class="overflow-hidden z-0 rounded-full relative p-3">
-                        <form role="form" onsubmit="return false" class="relative flex z-50 bg-white rounded-full"
-                            id="movie-form">
-                            <input type="text" placeholder="enter your search here"
+                        <form role="form" onsubmit="return false"
+                            class="relative flex h-[1.7rem] z-50 bg-white rounded-full" id="movie-form">
+                            <input type="text" placeholder="Enter your favorite movie for more info!"
                                 class="rounded-full flex-1 px-6 py-4 text-gray-700 focus:outline-none" id="form-title"
-                                onkeypress="if(event.key === 'Enter') fetchData()">
+                                onkeydown="if(event.key === 'Enter') fetchData()">
                             <button
-                                class="bg-indigo-500 text-white rounded-full font-semibold px-8 py-4 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
+                                class="bg-indigo-500 text-white rounded-full font-semibold px-8 py-2 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
                                 onclick="fetchData()">Search</button>
                         </form>
                         <div class="glow glow-1 z-10 bg-pink-400 absolute"></div>
@@ -47,10 +63,10 @@
                         <div class="glow glow-4 z-40 bg-blue-400 absolute"></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </section>
-        <section id="movie-info">
+        <section id="movie-info" class="pt-45">
             <div id="movie-info1" class="flex flex-wrap justify-evenly content-center gap-y-4 gap-x-1 w-full">
 
             </div>

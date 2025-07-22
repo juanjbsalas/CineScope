@@ -1,3 +1,7 @@
+h1 {
+  font-family: "Honk", "sans-serif";
+}
+
 #movie-info ul {
     list-style-type: disc;
     list-style: inside;
