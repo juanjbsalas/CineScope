@@ -1,13 +1,3 @@
-// fetch("http://www.omdbapi.com/?apikey=77a8b526&t=Star+Wars")
-//     .then(response => {
-//         if(!response.ok ){
-//             throw new Error("Could not fetch resource");
-//         }
-//         return response.json();
-//     })
-//     .then(data => console.log(data))
-//     .catch(error => console.error(error));
-
 moviesSearched = [];
 
 async function fetchData() {
@@ -34,13 +24,10 @@ async function fetchData() {
 
         if(!response.ok){
             throw new Error("Could not fetch resource");
-            // add inner html here for error
         }
 
         const data = await response.json();
         const sanitizedTitle = data.Title.replace(/[^\w-]/g, '-');
-        // console.log('Sanitized Title: ', sanitizedTitle);
-        // console.log('Movies Searched: ', moviesSearched);
         clearYearGenre();
         if(!moviesSearched.includes(sanitizedTitle)) {
             searchAnimation();
@@ -78,7 +65,6 @@ async function fetchData() {
                                                                     </div>
                                                                 </div>` 
                                                                 + document.getElementById('movie-info1').innerHTML;
-            // movTitle = data.Title
             moviesSearched.push(sanitizedTitle);
             console.log(moviesSearched);
         }
@@ -100,11 +86,10 @@ async function fetchData() {
 
     }
     catch(error){
-        // console.log("Did not find movie");
 
         const message = document.createElement("div");
         message.textContent = "Movie not found!";
-        message.className = "fixed top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded shadow-lg z-50 opacity-100 transition-opacity ease-in-out duration-500"; //centers it
+        message.className = "fixed top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded shadow-lg z-150 opacity-100 transition-opacity ease-in-out duration-500"; //centers it
         message.id = "not-found-message"
         document.getElementById('movie-info').appendChild(message); // Or append to a specific container
         movieNotFound(message);
@@ -130,12 +115,14 @@ function movieNotFound(message) {
     }, 2500);
 }
 
+//  Search Animation
 function searchAnimation() {
     let button = document.querySelector('#search-button');
     button.classList.add('bounce');
     setTimeout(() => button.classList.remove('bounce'), 500);
 }
 
+// Clear inputs on Year and Genre boxes
 function clearYearGenre() {
     document.getElementById('year-textbox').value = "";
     document.getElementById('genre-textbox').value = "";
