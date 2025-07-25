@@ -27,7 +27,8 @@ async function fetchData() {
         }
 
         const data = await response.json();
-        const sanitizedTitle = data.Title.replace(/[^\w-]/g, '-');
+        // Makes movie title an ID for its own card.
+        const sanitizedTitle = data.Title.replace(/[^\w-]/g, '-'); // This makes it so that the title has dashes so that the ID works.
         clearYearGenre();
         if(!moviesSearched.includes(sanitizedTitle)) {
             searchAnimation();
